@@ -33,7 +33,7 @@ public class RequestController {
     @RequestMapping(value = "add", method = RequestMethod.GET)
     public String displayAddPlayerForm(Model model) {
         model.addAttribute("title", "Add Prospect");
-        return "prospects/add";
+        return "pages/add";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
