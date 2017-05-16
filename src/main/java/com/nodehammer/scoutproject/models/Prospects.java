@@ -7,6 +7,19 @@ public class Prospects {
 
     private String name;
     private String bios;
+    private int playerId;
+    private static int nextId = 1;
+
+    public Prospects(String name, String bios) {
+        this.name = name;
+        this.bios = bios;
+    }
+
+    public Prospects () {
+        playerId = nextId;
+        nextId++;
+    }
+
 
     public String getName() {
         return name;
@@ -24,8 +37,11 @@ public class Prospects {
         this.bios = bios;
     }
 
-    public Prospects(String name, String bios) {
-        this.name = name;
-        this.bios = bios;
+    public int getPlayerId() {
+        return playerId;
+    }
+
+    public void setPlayerId(int playerId) {
+        this.playerId = playerId;
     }
 }

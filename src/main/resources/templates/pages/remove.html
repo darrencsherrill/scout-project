@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://wwww.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+<h1 th:text="${title}">Title</h1>
+
+<nav th:replace="fragments :: nav"></nav>
+
+<form method="post">
+
+    <div th:each="player : ${players}" class="checkbox">
+        <input type="checkbox" name="playerIds" th:value="${player.playerId}" th:id="${player.playerId}"/>
+        <label th:for="${player.name}" th:text="${player.name}" ></label>
+        <br />
+    </div>
+
+    <br />
+    <input type="submit" value="Remove Prospect" />
+    <br />
+
+</form>
+
+</body>
+</html>
