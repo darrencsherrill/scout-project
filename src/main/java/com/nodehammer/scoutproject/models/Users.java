@@ -8,8 +8,7 @@ import javax.validation.constraints.Size;
  */
 public class Users {
 
-    @NotNull
-    @Size(min=3, max=15);
+
     private String username;
     private String password;
     private String firstname;
